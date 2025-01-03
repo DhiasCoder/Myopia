@@ -1,0 +1,292 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #007bff;
+  padding: 15px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #ffdd57;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #e2f4f1;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+  background-color: #218838;
+}
+
+/* Statistics Section */
+.statistics {
+  background-color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  border: 1px solid #ddd;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.statistics h2 {
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.statistics ul {
+  list-style: none;
+  padding: 0;
+}
+
+.statistics ul li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* FAQ Section */
+.faq {
+  padding: 20px;
+  background-color: #f5f5f5;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 8px;
+}
+
+.faq h2 {
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+details {
+  margin: 10px 0;
+}
+
+details summary {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+details p {
+  padding: 10px 0;
+  line-height: 1.6;
+}
+
+/* Table Section */
+table {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  text-align: left;
+}
+
+table thead {
+  background-color: #007bff;
+  color: white;
+}
+
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Feedback Form */
+.feedback {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.feedback h2 {
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input,
+form textarea,
+form button {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Resources Section */
+.resources {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.resources ul {
+  list-style: none;
+  padding: 0;
+}
+
+.resources ul li {
+  margin: 10px 0;
+}
+
+.resources ul li a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.resources ul li a:hover {
+  color: #ffdd57;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Animations */
+header nav ul li a,
+.hero .btn,
+form button,
+.resources ul li a {
+  transition: all 0.3s ease;
+}
+
+.img-large {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+/* Seksi */
+.hero,
+.statistics,
+.faq {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 900px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content,
+.feedback {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 900px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.resources {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 900px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
