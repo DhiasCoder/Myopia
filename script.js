@@ -63,3 +63,24 @@ window.addEventListener("load", () => {
     document.body.removeChild(loader);
   });
 });
+
+function animatePercentages() {
+  const percentageElements = document.querySelectorAll(".percentage");
+
+  percentageElements.forEach((element) => {
+    const targetPercent = parseInt(element.getAttribute("data-target"), 10);
+    let currentPercent = 0;
+
+    const interval = setInterval(() => {
+      if (currentPercent <= targetPercent) {
+        element.textContent = `${currentPercent}%`;
+        currentPercent++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 20); // Kecepatan animasi (20ms per update)
+  });
+}
+
+// Memulai animasi semua persentase
+animatePercentages();
