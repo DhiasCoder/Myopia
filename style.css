@@ -35,6 +35,7 @@ body {
   color: #333;
   line-height: 1.6;
   scroll-behavior: smooth;
+  padding-top: 60px; /* Sesuaikan dengan tinggi header */
 }
 
 .page {
@@ -45,22 +46,63 @@ body {
   display: block;
 }
 
+/* Burger Menu */
+.burger {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 11; /* Tinggi agar selalu berada di atas menu */
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
 /* Navbar */
 nav {
+  background-color: #007bff;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  background-color: #007bff; /* Contoh warna latar belakang */
-  padding: 10px 20px; /* Spasi di dalam navbar */
+  position: fixed; /* membuat navbar tetap berada di posisi */
+  top: 0; /* posisikan di bagian atas */
+  left: 0;
+  height: 8%;
+  width: 100%; /* pastikan lebar navbar sesuai dengan layar */
+  z-index: 1000; /* memastikan navbar berada di atas elemen lain */
+  box-shadow: 0px 0px 30px black; /* Opsional */
+  border: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px; 
 }
 
 .nav-title {
+  font-size: 1.5rem;
+  color: white;
+  display: inline-block;
+}
+
+.nav-links {
+  list-style: none;
   display: flex;
-  align-items: center;
-  font-size: 1.5rem; /* Ukuran font judul */
-  font-weight: bold; /* Membuat teks lebih tebal */
-  color: #333; /* Warna teks */
-  gap: 10px; /* Spasi antara gambar dan teks */
+  z-index: 10; /* Lebih rendah dari burger */
+  pointer-events: auto; /* Menu hanya merespons klik saat aktif */
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
 .nav-title i {
@@ -82,6 +124,47 @@ nav ul li a {
   text-decoration: none;
   color: #333;
 }
+
+/* Styling untuk header */
+.sticky-header {
+  position: fixed; /* Membuat header tetap di atas */
+  top: 0; /* Posisi dari atas halaman */
+  left: 0;
+  width: 100%; /* Memastikan header penuh lebar */
+  background-color: #282c34; /* Warna latar belakang */
+  color: white;
+  z-index: 1000; /* Prioritas lebih tinggi agar di atas elemen lain */
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Memberikan efek bayangan */
+}
+
+/* Styling untuk navigasi */
+.sticky-header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sticky-header .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.sticky-header .nav-links li {
+  margin: 0 10px;
+}
+
+.sticky-header .nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.sticky-header .nav-links a:hover {
+  color: #00c4cc; /* Warna saat hover */
+}
+
 header nav ul li {
   margin: 0 15px;
 }
@@ -186,10 +269,15 @@ details p {
   text-align: justify;
 }
 
+details li {
+  padding: 5px 0;
+  line-height: 1.6;
+}
+
 /* Table Section */
 table {
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   margin: 20px auto;
   border-collapse: collapse;
   background-color: #fff;
@@ -219,6 +307,10 @@ table tbody tr:hover {
 .feedback {
   padding: 30px 20px;
   text-align: center;
+}
+
+.feedback label {
+  text-align: justify;
 }
 
 .feedback h2 {
@@ -315,7 +407,7 @@ footer {
   margin: 0 0.5rem;
 }
 
-footer p{
+footer p {
   color: white;
 }
 
@@ -324,7 +416,7 @@ footer p{
 }
 
 .footer-icons a:hover svg {
-  fill: green;
+  fill: grey;
 }
 
 /* Animations */
@@ -433,4 +525,22 @@ form button,
   20% {
     transform: scaleY(1);
   }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #aaa;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primaryIconColor);
 }
